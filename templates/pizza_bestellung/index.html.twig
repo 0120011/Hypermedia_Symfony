@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Pizzabestellung {% endblock %}
+
+{% block body %}
+    <style>
+        td {
+            padding: 10px;
+        }
+    </style>
+    <h3> Pizzabestellung </h3>
+    <table>
+        <tr>
+            <th> Id</th>
+            <th> Name </th>
+            <th> Adresse</th>
+            <th> Telefonnummer</th>
+            <th> Email </th>
+            <th> Groesse </th>
+            <th> Zustellung </th>
+
+        </tr>
+        {% for pizzabestellung in pizzabestellungen %}
+            <tr>
+                <td> {{ pizzabestellung.id }}</td>
+                <td> {{ pizzabestellung.name }}</td>
+                <td> {{ pizzabestellung.address }}</td>
+                <td> {{ pizzabestellung.telefon }}</td>
+                <td> {{ pizzabestellung.email }}</td>
+                <td> {{ groesseOptions[pizzabestellung.groesse] }}</td>
+                <td> {{ zustellungOptions[pizzabestellung.zustellung] }}</td>
+                <td>
+                    <a href="{{ path('pizza_bestellung_edit', {id: pizzabestellung.id}) }}">edit</a>
+                    <a href="{{ path('pizza_bestellung_delete', {id: pizzabestellung.id}) }}">delete</a>
+                </td>
+
+            </tr>
+        {% endfor %}
+    </table>
+    <a href="{{ path('pizza_bestellung_new') }}">New Pizzabestellung</a>
+{% endblock %}

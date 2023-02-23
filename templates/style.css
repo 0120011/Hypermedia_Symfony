@@ -1,0 +1,47 @@
+input{
+    margin-bottom: 0.5rem;
+}
+
+label{
+    display: inline-grid;
+    margin: 2em;
+}
+
+label.required{
+    margin: 2rem;
+}
+label {
+    margin-right: 2rem;
+    margin-bottom: 1rem;
+    vertical-align: center;
+}
+
+form {
+    background-color: #ffd0d0;
+    text-align: center;
+    margin-right: 4rem;
+    margin-left: 4rem;
+    padding: 1em;
+    border-radius: 1em;
+}
+
+#form_zutaten{
+    margin-bottom: 1rem;
+}
+#form_zustellung{
+    margin-bottom: 1rem;
+}
+#form_groesse{
+    margin-bottom: 1rem;
+}
+
+h1{
+    color: #FA7268;
+    font-size: 5rem;
+    width: fit-content;
+    margin-top: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding: .5em;
+    border-radius: 15px;
+}

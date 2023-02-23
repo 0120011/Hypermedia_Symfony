@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+
+        <style>
+            html{
+                font-family: Arial, Helvetica, sans-serif
+            }
+            input{
+                margin-bottom: 0.5rem;
+            }
+
+            label {
+                margin-right: 2rem;
+                margin-bottom: 1rem;
+                horiz-align: center;
+            }
+
+            form {
+                background-color: #ffd0d0;
+                margin-right: 25rem;
+                margin-left: 5rem;
+                padding: 3em;
+                border-radius: 1em;
+            }
+
+            #form_zutaten{
+                margin-bottom: 1rem;
+            }
+            #form_zustellung{
+                margin-bottom: 1rem;
+            }
+            #form_groesse{
+                margin-bottom: 1rem;
+            }
+
+            h1{
+                color: #FA7268;
+                font-size: 5rem;
+                width: fit-content;
+                margin-top: 1rem;
+                margin-left: 5rem;
+                padding: .5em;
+                border-radius: 15px;
+            }
+        </style>
+
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
+        {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
+        {% block stylesheets %}
+            {{ encore_entry_link_tags('app') }}
+        {% endblock %}
+
+        {% block javascripts %}
+            {{ encore_entry_script_tags('app') }}
+        {% endblock %}
+    </head>
+    <body>
+        {% block body %}{% endblock %}
+    </body>
+</html>
